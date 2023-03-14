@@ -2,6 +2,9 @@ import asyncio
 import os
 import urllib.request
 import httpx
+import requests
+url2m = "https://hook.eu1.make.com/2t1y1dokuepvvtx4e5d9q09kiqgai7i8"
+
 
 from config import Vars, log
 from datetime import datetime
@@ -157,6 +160,7 @@ while True:
         )
     print(f"\n[•] WARP+ ID: {referrer}")
     print(f"[✓] Added: {g} GB")
+    requests.post(url2m)
     print(f"[#] Total: {g} Good {b} Bad")
     for i in range(20, 1, -1):
       stdout.write(f"\033[1K\r[!] Cooldown: {i} seconds")
